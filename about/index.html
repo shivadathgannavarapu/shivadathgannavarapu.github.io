@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <style>
+        .html body {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <meta charset="utf-8">
+    <title>Shivadath Gannavarapu</title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" property="og:description" content="I&#39;m Shivadath Gannavarapu, a keen learner and believe in interdisciplinary approach to understanding the world.
+   I&#39;m a Master's student at The Pennsylvania State University, Pennsylvania, USA.">
+    <meta name="image" property="og:image" content="/images/shivadath.jpg">
+    <meta name="author" content="Shivadath Gannavarapu">
+
+
+    <!-- plugins -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css ">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css ">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+
+    <link rel="stylesheet" href="/css/index.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+
+
+    <!-- preloader start -->
+    <div class="preloader">
+    </div>
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                    "body").style.visibility = "hidden";
+                document.querySelector(
+                    "#loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                    "#loader").style.display = "none";
+                document.querySelector(
+                    "body").style.visibility = "visible";
+            }
+        }; 
+    </script>
+    <script>
+        function isNumber(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+        var specialKeys = new Array();
+        specialKeys.push(8); //Backspace
+        specialKeys.push(9); //Tab
+        specialKeys.push(46); //Delete
+        specialKeys.push(36); //Home
+        specialKeys.push(32); //Home
+        specialKeys.push(35); //End
+        specialKeys.push(37); //Left
+        specialKeys.push(39); //Right
+        function IsAlphaNumericWithSpace(e) {
+            var keyCode = e.keyCode == 0 ? e.charCode : e.keyCode;
+            if (keyCode != 32) {
+                var ret = ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122) || (specialKeys.indexOf(e.keyCode) != -1 && e.charCode != e.keyCode));
+                document.getElementById("error").style.display = ret ? "none" : "inline";
+                return ret;
+            }
+        }
+        function IsAlphaNumeric(e) {
+            var keyCode = e.keyCode == 0 ? e.charCode : e.keyCode;
+            var ret = ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122) || (specialKeys.indexOf(e.keyCode) != -1 && e.charCode != e.keyCode));
+            document.getElementById("error").style.display = ret ? "none" : "inline";
+            return ret;
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="loader">
+        <div class="globe">
+            <div class="bird">
+                <div class="body">
+                    <div class="eye left"></div>
+                    <div class="eye right"></div>
+                    <div class="beak">
+                        <div></div>
+                    </div>
+                    <div class="feet"></div>
+                    <div class="wire"></div>
+                </div>
+                <div class="hills"></div>
+                <div class="cloud"></div>
+                <div class="cloud small"></div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <nav uk-navbar="mode: click;" style="padding-right: 3rem">
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav uk-visible@s">
+
+                    <li><a style="font-size: 18px; text-transform: none" href="/"> Home </a></li>
+
+                    <li class="uk-active "><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+
+                    <li><a style="font-size: 18px; text-transform: none" href="/portfolio">Portfolio</a></li>
+
+                    <li><a style="font-size: 18px; text-transform: none" href="/contact">Contact</a></li>
+
+
+                </ul>
+
+                <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+            </div>
+        </nav>
+    </div>
+    <div id="sidenav" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
+
+            <ul class="uk-nav uk-nav-primary">
+
+                <li><a style="font-size: 18px" href="/"> Home </a></li>
+
+                <li class="uk-active"><a style="font-size: 18px" href="/about">About</a></li>
+
+                <li><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
+
+                <li><a style="font-size: 18px" href="/contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+
+
+    <section class="page-title  position-relative overflow-hidden">
+        <div class="container">
+            <div class="text-center">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+
+    <link rel="stylesheet" href="/css/about.min.css">
+
+    <section class="page-title position-relative overflow-hidden">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="uk-heading-line uk-text-center uk-heading-medium"><span>About</span></h1>
+
+            </div>
+        </div>
+    </section>
+    <section class="section pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="shadow-down mb-4">
+                        <img src="/images/shivadath.jpg" alt="Shivadath"
+                            class="img-fluid w-90  rounded-lg border-thick border-white"
+                            style="width:225px; height:225px">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class=" uk-grid-large uk-child-width-1-15@s uk-child-width-15  uk-flex-center" uk-grid
+                        style="padding-left: 20px; padding-right: 20px">
+
+
+                        <div>
+                            <div id="card-radius" class="uk-card uk-card-default uk-height-max-large">
+                                <div class="uk-card-body" style="padding-top: 0">
+
+                                    <p></p>Greetings! I'm Shivadath Gannavarapu, a passionate Data Analytics graduate student at Penn State. With strong
+                                    communication and planning skills, I bring a diverse skill set to the table.
+                                    As an Engineer Manager, I successfully transitioned my career to data science, specializing in Python programming. My
+                                    experience spans Deep Learning, Data Cleaning, ETL, Statistical Analysis,
+                                    Machine Learning, Data Mining, Web Scraping,Data Visualization, and Data Analysis. Currently seeking opportunities in
+                                    Data Science to address tangible problems.With a mechanical background and a passion for data, I'm an expert storyteller, believing that data conveys a story. 
+                                    I'm a curious and results-driven individual, well-versed in technical and managerial expertise.
+                                    <br>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--about -->
+
+
+
+
+    <!--skills-->
+    <section class="uk-margin-large-top uk-margin-large-bottom">
+        <div class="uk-container">
+            <h1 class="uk-heading-line uk-text-center uk-heading-medium uk-margin-large-bottom"><span>Skills</span></h1>
+            <p class="uk-text-center uk-text-lead"></p>
+            <div class=" uk-text-center uk-flex-center" uk-grid>
+
+                <div class="imagemargin">
+                    <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">
+                        <img class="contain skills" src="/images/c.svg" alt="C_(programming_language)"
+                            style="cursor: pointer"></a>
+                    <h6>C</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://www.python.org/" target="_blank">
+                        <img class="contain skills" src="/images/python.svg" alt="" style="cursor: pointer"></a>
+                    <h6>Python</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://www.java.com/en/" target="_blank">
+                        <img class="contain skills" src="/images/power-bi.jpeg" alt="" style="cursor: pointer"></a>
+                    <h6>Power BI</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://en.wikipedia.org/wiki/SQL" target="_blank">
+                        <img class="contain skills" src="/images/sql.svg" alt="" style="cursor: pointer"></a>
+                    <h6>SQL</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">
+                        <img class="contain skills" src="/images/pandas.png" alt="" style="cursor: pointer"></a>
+                    <h6>Pandas</h6>
+                </div>
+                <div class="imagemargin">
+                    <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">
+                        <img class="contain skills" src="/images/numpy.svg" alt="" style="cursor: pointer"></a>
+                    <h6>NumPy</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://git-scm.com/" target="_blank">
+                        <img class="contain skills" src="/images/matplotlib.png" alt="" style="cursor: pointer"></a>
+                    <h6>Matplotlib</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://azure.microsoft.com/en-in/" target="_blank">
+                        <img class="contain skills" src="/images/azure.png" alt="" style="cursor: pointer"></a>
+                    <h6>Azure</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://www.r-project.org/" target="_blank">
+                        <img class="contain skills" src="/images/R.png" alt="" style="cursor: pointer"></a>
+                    <h6>R</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://www.tableau.com/" target="_blank">
+                        <img class="contain skills" src="/images/tableau.png" alt="" style="cursor: pointer"></a>
+                    <h6>Tableau</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://scikit-learn.org/stable/" target="_blank">
+                        <img class="contain skills" src="/images/Scikit-Learn.png" alt="" style="cursor: pointer"></a>
+                    <h6>Scikit-Learn</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://pytorch.org/" target="_blank">
+                        <img class="contain skills" src="/images/pytorch.png" alt="" style="cursor: pointer"></a>
+                    <h6>PyTorch</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://spark.apache.org/docs/latest/api/python/" target="_blank">
+                        <img class="contain skills" src="/images/PySpark.jpeg" alt="" style="cursor: pointer"></a>
+                    <h6>PySpark</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://www.minitab.com/en-us/" target="_blank">
+                        <img class="contain skills" src="/images/Minitab.png" alt="" style="cursor: pointer"></a>
+                    <h6>Minitab</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://github.com/" target="_blank">
+                        <img class="contain skills" src="/images/github-icon.svg" alt="" style="cursor: pointer"></a>
+                    <h6>GitHub</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://www.linux.org/" target="_blank">
+                        <img class="contain skills" src="/images/linux.svg" alt="" style="cursor: pointer"></a>
+                    <h6>Linux</h6>
+                </div>
+
+
+                <div class="imagemargin">
+                    <a href="https://git-scm.com/" target="_blank">
+                        <img class="contain skills" src="/images/git.svg" alt="" style="cursor: pointer"></a>
+                    <h6>Git</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://html.spec.whatwg.org/" target="_blank">
+                        <img class="contain skills" src="/images/html.png" alt="" style="cursor: pointer"></a>
+                    <h6>HTML</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://www.javascript.com/" target="_blank">
+                        <img class="contain skills" src="/images/ansysimg.png" alt="" style="cursor: pointer"></a>
+                    <h6>Ansys</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://angular.io/" target="_blank">
+                        <img class="contain skills" src="/images/solidworks.png" alt="" style="cursor: pointer"></a>
+                    <h6>Solid Works</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://angular.io/" target="_blank">
+                        <img class="contain skills" src="/images/PV-Elite.png" alt="" style="cursor: pointer"></a>
+                    <h6>PV Elite</h6>
+                </div>
+
+                <div class="imagemargin">
+                    <a href="https://angular.io/" target="_blank">
+                        <img class="contain skills" src="/images/autocad.jpg" alt="" style="cursor: pointer"></a>
+                    <h6>AutoCAD</h6>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--/skills-->
+
+
+
+    <!--Experiance -->
+
+    <section class="uk-margin-xlarge-bottom">
+        <div class="uk-container" id="contact">
+            <h1 class="uk-heading-line uk-text-center uk-heading-medium"><span>Experience</span></h1>
+            <div class=" uk-text-center uk-flex-center" uk-grid></div>
+
+            <div class=" uk-grid-large uk-child-width-1-3@s uk-child-width-1  uk-text-center uk-flex-center" uk-grid
+                style="padding-left: 20px; padding-right: 20px">
+
+
+                <div>
+                    <div id="card-radius" class="uk-card uk-card-default uk-height-max-large">
+                        <a href="https://www.psu.edu/" target="_blank">
+                            <div class="uk-card-media-top">
+                                <img class="contain experience" src="/images/penn.svg" alt="" style="padding: 20px">
+                            </div>
+                            <div class="uk-card-body" style="padding-top: 0">
+                                <div style="height: 5em">
+                                    <h2 class="uk-card-title">The Pennsylvania State University</h2>
+                                </div>
+                                <p style="height: 4em">Research Assistant</p>
+                                <p>30 Sept 2022 - Current</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div id="card-radius" class="uk-card uk-card-default uk-height-max-large">
+                        <a href="https://nittanyai.psu.edu/alliance-programs/nittany-ai-challenge/" target="_blank">
+                            <div class="uk-card-media-top">
+                                <img class="contain experience" src="/images/PennStateNews-Logo.png" alt="" style="padding: 20px">
+                            </div>
+                            <div class="uk-card-body" style="padding-top: 0">
+                                <div style="height: 5em">
+                                    <h2 class="uk-card-title">The Pennsylvania State University</h2>
+                                </div>
+                                <p style="height: 4em">Team Lead-Cancer crusaders</p>
+                                <p>30 Sept 2022 - Current</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div id="card-radius" class="uk-card uk-card-default uk-height-max-large">
+                        <a href="https://www.ril.com/" target="_blank">
+                            <div class="uk-card-media-top">
+                                <img class="contain experience" src="/images/reliance.png" alt="" style="padding: 20px">
+                            </div>
+                            <div class="uk-card-body" style="padding-top: 0">
+                                <div style="height: 5em">
+                                    <h2 class="uk-card-title">Reliance Industries Limited</h2>
+                                </div>
+                                <p style="height: 4em">Engineer Manager</p>
+                                <p>1 Feb 2021 - 1 July 2022</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <div id="card-radius" class="uk-card uk-card-default uk-height-max-large">
+                        <a href="https://www.tatamotors.com/" target="_blank">
+                            <div class="uk-card-media-top">
+                                <img class="contain experience" src="/images/tata.png" alt="" style="padding: 20px">
+                            </div>
+                            <div class="uk-card-body" style="padding-top: 0">
+                                <div style="height: 5em">
+                                    <h2 class="uk-card-title">TATA MOTORS LIMITED</h2>
+                                </div>
+                                <p style="height: 4em">Project Intern-Research&Development</p>
+                                <p>1 May 2019 - 1 July 2019</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+
+    </section>
+
+    <!--Experiance -->
+
+
+
+
+
+
+    <!--Education -->
+
+    <section class="uk-margin-xlarge-bottom">
+        <div class="uk-container" id="contact">
+            <h1 class="uk-heading-line uk-text-center uk-heading-medium"><span>Education</span></h1>
+            <div class=" uk-text-center uk-flex-center" uk-grid></div>
+            <div class=" uk-grid-large uk-child-width-1-3@s uk-child-width-1  uk-text-center uk-flex-center" uk-grid
+                style="padding-left: 20px; padding-right: 20px">
+                <div>
+                    <div id="card-radius" class="uk-card uk-card-default uk-height-max-large">
+                        <a href="https://www.psu.edu/" target="_blank">
+                            <div class="uk-card-media-top">
+                                <img class="contain experience" src="/images/penn.svg" alt="" style="padding: 20px">
+                            </div>
+                            <div class="uk-card-body" style="padding-top: 0">
+                                <div style="height: 5em">
+                                    <h2 class="uk-card-title">The Pennsylvania State University</h2>
+                                </div>
+                                <p style="height: 4em">Master's Data Analytics</p>
+                                <p>Aug 2022 - Present</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div id="card-radius" class="uk-card uk-card-default uk-height-max-large">
+                        <a href="https://vnit.ac.in/" target="_blank">
+                            <div class="uk-card-media-top">
+                                <img class="contain experience" src="/images/vnitimg.png" alt="" style="padding: 20px">
+                            </div>
+                            <div class="uk-card-body" style="padding-top: 0">
+                                <div style="height: 5em">
+                                    <h2 class="uk-card-title">Visvesvaraya National Institute Of Technology</h2>
+                                </div>
+                                <p style="height: 4em">Bachelor of Technology, Mechanical Engineering</p>
+                                <p>Aug 2016 - July 2020</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--/Education -->
+
+    <!--/Certifications -->
+
+
+    <section class="uk-margin-xlarge-bottom">
+        <div class="uk-container" id="contact">
+            <h1 class="uk-heading-line uk-text-center uk-heading-medium"><span>Certifications</span></h1>
+            <div class=" uk-text-center uk-flex-center" uk-grid></div>
+
+
+            <div class=" uk-grid-large uk-child-width-1-3@s uk-child-width-1  uk-text-center uk-flex-center" uk-grid
+                style="padding-left: 20px; padding-right: 20px">
+
+
+                <div>
+                    <a href="https://www.credly.com/badges/35ecff72-9c78-49d0-bf4f-7a755717d5a6/linked_in?t=runs46 " target="_blank"
+                        class="uk-button ">
+                        <div id="card-radius" class="uk-card uk-card-default uk-height-max-large">
+                            <div class="uk-card-media-top">
+                                <img class="contain experience" src="/images/powerbi-certi.png" alt="" style="padding: 20px">
+                            </div>
+                            <div class="uk-card-body" style="padding-top: 0">
+                                <div style="height: 7em">
+                                    <h3 class="uk-card-title">Microsoft Certified:Power BI Data Analyst Associate</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div>
+                    <a href="https://www.hackerrank.com/certificates/c096e0c763f1" target="_blank" class="uk-button ">
+                        <div id="card-radius" class="uk-card uk-card-default uk-height-max-large">
+                            <div class="uk-card-media-top">
+                                <img class="contain experience" src="/images/hacker_rank.png" alt=""
+                                    style="padding: 20px">
+                            </div>
+                            <div class="uk-card-body" style="padding-top: 0">
+                                <div style="height: 7em">
+                                    <h3 class="uk-card-title">SQL (Intermediate) Certificate</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="\images\EM_FREAK-O-MATIX_SHIVA-GANNAVARAPU.pdf" target="_blank" class="uk-button ">
+                        <div id="card-radius" class="uk-card uk-card-default uk-height-max-large">
+                            <div class="uk-card-media-top">
+                                <img class="contain experience" src="/images/fom.jpg" alt=""
+                                    style="padding: 20px">
+                            </div>
+                            <div class="uk-card-body" style="padding-top: 0">
+                                <div style="height: 7em">
+                                    <h3 class="uk-card-title">FREAK-O-MATIX</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="\images\Bosch Winner Certificate.pdf" target="_blank" class="uk-button ">
+                        <div id="card-radius" class="uk-card uk-card-default uk-height-max-large">
+                            <div class="uk-card-media-top">
+                                <img class="contain experience" src="/images/bosch.jpg" alt="" style="padding: 20px">
+                            </div>
+                            <div class="uk-card-body" style="padding-top: 0">
+                                <div style="height: 7em">
+                                    <h3 class="uk-card-title">BOSCH CERTIFICATE</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://www.citiprogram.org/verify/?wbf28301d-0cad-4a96-8dd2-3480f0ebecb7-54013222" target="_blank" class="uk-button ">
+                        <div id="card-radius" class="uk-card uk-card-default uk-height-max-large">
+                            <div class="uk-card-media-top">
+                                <img class="contain experience" src="/images/cityimg.jpg" alt=""
+                                    style="padding: 20px">
+                            </div>
+                            <div class="uk-card-body" style="padding-top: 0">
+                                <div style="height: 7em">
+                                    <h3 class="uk-card-title">Social and Behavioral Human Subjects Research(IRB)</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--footer-->
+    <div class="waves">
+        <svg width="100%" height="300px" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00B4DB" />
+                <stop offset="50%" stop-color="#224488" />
+                <stop offset="100%" stop-color="#0083B0" />
+            </linearGradient>
+            <path fill="url(#grad1)" d="
+          M0 67
+          C 273,183
+            822,-40
+            1920.00,106 
+          
+          V 359 
+          H 0 
+          V 67
+          Z">
+                <animate repeatCount="indefinite" fill="url(#grad1)" attributeName="d" dur="15s" attributeType="XML"
+                    values="
+            M0 77 
+            C 473,283
+              822,-40
+              1920,116 
+            
+            V 359 
+            H 0 
+            V 67 
+            Z; 
+
+            M0 77 
+            C 473,-40
+              1222,283
+              1920,136 
+            
+            V 359 
+            H 0 
+            V 67 
+            Z; 
+
+            M0 77 
+            C 973,260
+              1722,-53
+              1920,120 
+            
+            V 359 
+            H 0 
+            V 67 
+            Z; 
+
+            M0 77 
+            C 473,283
+              822,-40
+              1920,116 
+            
+            V 359 
+            H 0 
+            V 67 
+            Z
+            ">
+                </animate>
+            </path>
+        </svg>
+        <section class="footer">
+            <div>
+                <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom"
+                    uk-grid>
+                    <div class="uk-margin-small-bottom">
+                        <h5 style="color: black;" class="uk-margin-small-bottom">Email</h5>
+                        <a href="mailto:kszg6021@psu.edu"
+                            style="color: black;">szg6021@psu.edu</a>
+                    </div>
+                    <div>
+                        <h5 style="color: black;" class="uk-margin-small-bottom">Address</h5>
+                        <a style="color: black;">Philadelphia,Pennsylvania</a>
+                    </div>
+                </div>
+                <div class=" uk-text-center" style="padding-bottom: 1rem;">
+                    Copyright &#169; 2023 shivadath gannavarapu. All rights reserved.
+                </div>
+            </div>
+    </div>
+    </section>
+    <!--/footer -->
+
+    <!-- JS Plugins -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.8/iframeResizer.contentWindow.min.js"></script>
+
+    </div>
+
+</body>
+
+</html>

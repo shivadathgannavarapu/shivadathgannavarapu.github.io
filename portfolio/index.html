@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <title>Shivadath Gannavarapu</title>
+
+
+
+
+  <!-- plugins -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css ">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css ">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+
+
+  <!-- Main Stylesheet -->
+
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+  <link rel="stylesheet" href="/css/footer.css" integrity="" media="screen">
+
+
+
+
+
+
+  <link rel="stylesheet" href="/css/index.css">
+
+
+
+  <script>
+    document.onreadystatechange = function () {
+      if (document.readyState !== "complete") {
+        document.querySelector(
+          "body").style.visibility = "hidden";
+        document.querySelector(
+          "#loader").style.visibility = "visible";
+      } else {
+        document.querySelector(
+          "#loader").style.display = "none";
+        document.querySelector(
+          "body").style.visibility = "visible";
+      }
+    }; 
+  </script>
+  <script>
+    function isNumber(evt) {
+      evt = (evt) ? evt : window.event;
+      var charCode = (evt.which) ? evt.which : evt.keyCode;
+      if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+      }
+      return true;
+    }
+    var specialKeys = new Array();
+    specialKeys.push(8); //Backspace
+    specialKeys.push(9); //Tab
+    specialKeys.push(46); //Delete
+    specialKeys.push(36); //Home
+    specialKeys.push(32); //Home
+    specialKeys.push(35); //End
+    specialKeys.push(37); //Left
+    specialKeys.push(39); //Right
+    function IsAlphaNumericWithSpace(e) {
+      var keyCode = e.keyCode == 0 ? e.charCode : e.keyCode;
+      if (keyCode != 32) {
+        var ret = ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122) || (specialKeys.indexOf(e.keyCode) != -1 && e.charCode != e.keyCode));
+        document.getElementById("error").style.display = ret ? "none" : "inline";
+        return ret;
+      }
+    }
+    function IsAlphaNumeric(e) {
+      var keyCode = e.keyCode == 0 ? e.charCode : e.keyCode;
+      var ret = ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122) || (specialKeys.indexOf(e.keyCode) != -1 && e.charCode != e.keyCode));
+      document.getElementById("error").style.display = ret ? "none" : "inline";
+      return ret;
+    }
+  </script>
+
+</head>
+
+<body>
+  <div id="loader">
+    <div class="globe">
+      <div class="bird">
+        <div class="body">
+          <div class="eye left"></div>
+          <div class="eye right"></div>
+          <div class="beak">
+            <div></div>
+          </div>
+          <div class="feet"></div>
+          <div class="wire"></div>
+        </div>
+        <div class="hills"></div>
+        <div class="cloud"></div>
+        <div class="cloud small"></div>
+      </div>
+    </div>
+  </div>
+  <!-- preloader start -->
+  <div class="preloader"></div>
+
+
+  <div class="wrapper">
+    <nav uk-navbar="mode: click;" style="padding-right: 3rem">
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav uk-visible@s">
+
+          <li><a style="font-size: 18px; text-transform: none" href="/"> Home </a></li>
+
+          <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+
+          <li class="uk-active "><a style="font-size: 18px; text-transform: none" href="/portfolio">Portfolio</a></li>
+
+          <li><a style="font-size: 18px; text-transform: none" href="/contact">Contact</a></li>
+
+
+        </ul>
+
+        <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+      </div>
+    </nav>
+  </div>
+
+  <div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar">
+
+      <ul class="uk-nav uk-nav-primary">
+
+        <li><a style="font-size: 18px" href="/"> Home </a>
+        </li>
+
+        <li><a style="font-size: 18px" href="/about">About</a></li>
+
+        <li class="uk-active "><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
+
+        <li><a style="font-size: 18px" href="/contact">Contact</a></li>
+
+
+      </ul>
+
+    </div>
+  </div>
+
+
+  <section class="page-title  position-relative overflow-hidden">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="uk-heading-line uk-text-center uk-heading-medium"><span>Portfolio</span></h1>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section>
+    <div class="uk-container uk-margin-xlarge-bottom">
+      <div uk-filter="target: .js-filter">
+        <ul class="uk-subnav uk- uk-subnav-divider uk-flex-center">
+
+
+          <li uk-filter-control="[data-tags*='Projects']">
+            <a href="#">Projects</a>
+          </li>
+
+
+        </ul>
+
+        <ul class="js-filter uk-child-width-1-1 uk-child-width-1-4@m uk-text-center" uk-grid
+          uk-height-match="target: > li > div > .fixy">
+          <!-----Examples---->
+
+
+
+          <li data-tags="Projects">
+            <a href="https://github.com/shivadathgannavarapu/NetflixDashboard" target="_blank" class="uk-button ">
+              <div id="card-radius" class="uk-card uk-card-default" style="position: relative;">
+                <div class="fixy">
+                  <div class="uk-card-media-top">
+                    <img style="width: 100%;" class="contain experience" src="/images/netflix.jpg" alt="" />
+            </a>
+      </div>
+      <div class="uk-card-body">
+        <h3 class="uk-card-title">Netflix Data visualization</h3>
+        <p>Uncover the hidden gems of entertainment with an interactive dashboard</p>
+      </div>
+    </div>
+
+    </div>
+
+    </li>
+
+    <li data-tags="Projects">
+      <a href="https://github.com/shivadathgannavarapu/Survive90SepsisMortalityPrediction" target="_blank" class="uk-button ">
+        <div id="card-radius" class="uk-card uk-card-default" style="position: relative;">
+          <div class="fixy">
+            <div class="uk-card-media-top">
+              <img class="contain experience" src="/images/mortalityimg.jpg" alt="" />
+      </a>
+      </div>
+      <div class="uk-card-body">
+        <h3 class="uk-card-title">Survive 90: Empowering health care through deep learning and predictive analytics</h3>
+        <p>Deep learning model helps doctors to identify vital playing critical role in increasing life of patients
+          suffering with Septicemia</p>
+      </div>
+      </div>
+
+
+      </div>
+
+    </li>
+
+
+    <li data-tags="Projects">
+      <a href="https://github.com/shivadathgannavarapu" target="_blank" class="uk-button ">
+        <div id="card-radius" class="uk-card uk-card-default" style="position: relative;">
+          <div class="fixy">
+            <div class="uk-card-media-top">
+              <img class="contain experience" src="/images/cancerimg.jpg" alt="" />
+      </a>
+      </div>
+      <div class="uk-card-body">
+        <h3 class="uk-card-title">Empowering Early detection: Harnessing AI for skin cancer diagnosis </h3>
+        <p>Our Deeplearning technologies analyze images to detect skin cancer early, provinding accurate results and bridging gap of individuals who
+          doesn't have access to trained dermatologists</p>
+      </div>
+      </div>
+      </div>
+
+    </li>
+
+    <li data-tags="Projects">
+      <a href="https://github.com/shivadathgannavarapu" target="_blank" class="uk-button ">
+        <div id="card-radius" class="uk-card uk-card-default" style="position: relative;">
+          <div class="fixy">
+            <div class="uk-card-media-top">
+              <img class="contain experience" src="/images/smartimg.jpg" alt="" />
+      </a>
+      </div>
+      <div class="uk-card-body">
+        <h3 class="uk-card-title">Efficiency Amplified: Empowering Industries through Data</h3>
+        <p>As an Design Engineer Manager, I led my team to design a model which keeps track of its maintenance and help us
+          improving revenue of company</p>
+      </div>
+      </div>
+      </div>
+    </li>
+
+
+    <li data-tags="Projects">
+      <a href="https://github.com/shivadathgannavarapu/ImageClassification" target="_blank" class="uk-button ">
+        <div id="card-radius" class="uk-card uk-card-default" style="position: relative;">
+          <div class="fixy">
+            <div class="uk-card-media-top">
+              <img class="contain experience" src="/images/imageclass.jpg" alt="" />
+      </a>
+      </div>
+      <div class="uk-card-body">
+        <h3 class="uk-card-title">Power of RNNs for Accurate Image Classification</h3>
+        <p>In this Project, we mainly focus on Image Classification using RNN, where cutting-edge deep learning techniques are
+          employed to accurately categorize images into different classes. By addressing challenges such as corrupted images,
+          overfitting, and parameter optimization through hyperparameter tuning, this project showcases the potential of RNNs in
+          achieving robust and precise image classification results.</p>
+      </div>
+      </div>
+      </div>
+    </li>
+
+    <li data-tags="Projects">
+      <a href="https://github.com/shivadathgannavarapu/SentimentAnalysisofIMDBData" target="_blank" class="uk-button ">
+        <div id="card-radius" class="uk-card uk-card-default" style="position: relative;">
+          <div class="fixy">
+            <div class="uk-card-media-top">
+              <img class="contain experience" src="/images/imdbimg.jpg" alt="" />
+      </a>
+      </div>
+      <div class="uk-card-body">
+        <h3 class="uk-card-title">Analyzing Sentiments through RNNs: Pulse of IMDB ReviewData</h3>
+        <p>The project mainly focuses on the realm of sentiment analysis utilizing Recurrent Neural Networks (RNNs) to predict the
+        sentiment of IMDB movie reviews. By exploring the power of "vanilla" RNN, LSTM, and GRU, we aim to decipher the emotions
+        hidden within textual data. Leveraging Keras' seamless data handling capabilities, we simplify the process of
+        preprocessing and encoding words, enabling efficient sentiment analysis.</p>
+      </div>
+      </div>
+      </div>
+    </li>
+
+    <li data-tags="Projects">
+      <a href="https://github.com/shivadathgannavarapu/HeartFailurePrediction" target="_blank" class="uk-button ">
+        <div id="card-radius" class="uk-card uk-card-default" style="position: relative;">
+          <div class="fixy">
+            <div class="uk-card-media-top">
+              <img class="contain experience" src="/images/heartimg.jpg" alt="" />
+      </a>
+      </div>
+      <div class="uk-card-body">
+        <h3 class="uk-card-title">Prediction of Heart Failure using Machine Learning</h3>
+        <p>In this project, we leverage machine learning techniques to accurately predict heart failure based on clinical
+          attributes. We aim to identify the most effective model for early detection and prevention of heart failure to
+          revolutionize healthcare through predictive analytics and improve patient outcomes.</p>
+      </div>
+      </div>
+      </div>
+    </li>
+
+
+
+    </ul>
+    </div>
+    </div>
+  </section>
+
+
+
+  <!--
+
+<div id = "over" style=" width:100%; height:100%">
+<img src="/images/work-in-progress.jpg">
+</div>
+
+-->
+
+  <section class="uk-margin">
+    <div class="uk-container">
+      <div class="uk-text-center">
+        <p></p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--footer-->
+  <div class="waves">
+    <svg width="100%" height="300px" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#00B4DB" />
+        <stop offset="50%" stop-color="#224488" />
+        <stop offset="100%" stop-color="#0083B0" />
+      </linearGradient>
+      <path fill="url(#grad1)" d="
+        M0 67
+        C 273,183
+          822,-40
+          1920.00,106 
+        
+        V 359 
+        H 0 
+        V 67
+        Z">
+        <animate repeatCount="indefinite" fill="url(#grad1)" attributeName="d" dur="15s" attributeType="XML" values="
+          M0 77 
+          C 473,283
+            822,-40
+            1920,116 
+          
+          V 359 
+          H 0 
+          V 67 
+          Z; 
+
+          M0 77 
+          C 473,-40
+            1222,283
+            1920,136 
+          
+          V 359 
+          H 0 
+          V 67 
+          Z; 
+
+          M0 77 
+          C 973,260
+            1722,-53
+            1920,120 
+          
+          V 359 
+          H 0 
+          V 67 
+          Z; 
+
+          M0 77 
+          C 473,283
+            822,-40
+            1920,116 
+          
+          V 359 
+          H 0 
+          V 67 
+          Z
+          ">
+        </animate>
+      </path>
+    </svg>
+    <section class="footer1">
+      <div>
+        <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+          <div class="uk-margin-small-bottom">
+            <h5 style="color: black;" class="uk-margin-small-bottom">Email</h5>
+            <a href="mailto:szg6021@psu.edu" style="color: black;">szg6021@psu.edu</a>
+          </div>
+          <div>
+            <h5 style="color: black;" class="uk-margin-small-bottom">Address</h5>
+            <a style="color: black;">Philadelphia,Pennsylvania</a>
+          </div>
+        </div>
+        <div class=" uk-text-center" style="padding-bottom: 1rem;">
+          Copyright &#169; 2023 shivadath gannavarapu. All rights reserved.
+
+        </div>
+      </div>
+  </div>
+  </section>
+  <!--/footer -->
+
+
+
+  <!-- JS Plugins -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.8/iframeResizer.contentWindow.min.js"></script>
+
+
+  </div>
+
+</body>
+
+</html>

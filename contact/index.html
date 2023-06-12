@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="utf-8">
+  <title>Shivadath Gannavarapu</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- plugins -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css ">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css ">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+
+
+  <!-- Main Stylesheet -->
+
+  <link rel="stylesheet" href="/css/style.min.css" integrity="" media="screen">
+
+
+
+  <link rel="stylesheet" href="/css/index.css">
+
+  <!-- preloader start -->
+
+  <script>
+
+    document.onreadystatechange = function () {
+      if (document.readyState !== "complete") {
+        document.querySelector(
+          "body").style.visibility = "hidden";
+        document.querySelector(
+          "#loader").style.visibility = "visible";
+      } else {
+        document.querySelector(
+          "#loader").style.display = "none";
+        document.querySelector(
+          "body").style.visibility = "visible";
+      }
+    }; 
+  </script>
+  <script>
+    function isNumber(evt) {
+      evt = (evt) ? evt : window.event;
+      var charCode = (evt.which) ? evt.which : evt.keyCode;
+      if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+      }
+      return true;
+    }
+    var specialKeys = new Array();
+    specialKeys.push(8); //Backspace
+    specialKeys.push(9); //Tab
+    specialKeys.push(46); //Delete
+    specialKeys.push(36); //Home
+    specialKeys.push(32); //Home
+    specialKeys.push(35); //End
+    specialKeys.push(37); //Left
+    specialKeys.push(39); //Right
+    function IsAlphaNumericWithSpace(e) {
+      var keyCode = e.keyCode == 0 ? e.charCode : e.keyCode;
+      if (keyCode != 32) {
+        var ret = ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122) || (specialKeys.indexOf(e.keyCode) != -1 && e.charCode != e.keyCode));
+        document.getElementById("error").style.display = ret ? "none" : "inline";
+        return ret;
+      }
+    }
+    function IsAlphaNumeric(e) {
+      var keyCode = e.keyCode == 0 ? e.charCode : e.keyCode;
+      var ret = ((keyCode >= 48 && keyCode <= 57) || (keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122) || (specialKeys.indexOf(e.keyCode) != -1 && e.charCode != e.keyCode));
+      document.getElementById("error").style.display = ret ? "none" : "inline";
+      return ret;
+    }
+  </script>
+
+</head>
+
+<body>
+  <div id="loader">
+    <div class="globe">
+      <div class="bird">
+        <div class="body">
+          <div class="eye left"></div>
+          <div class="eye right"></div>
+          <div class="beak">
+            <div></div>
+          </div>
+          <div class="feet"></div>
+          <div class="wire"></div>
+        </div>
+        <div class="hills"></div>
+        <div class="cloud"></div>
+        <div class="cloud small"></div>
+      </div>
+    </div>
+  </div>
+  <div class="preloader"></div>
+
+
+  <div class="wrapper">
+    <nav uk-navbar="mode: click;" style="padding-right: 3rem">
+      <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav uk-visible@s">
+
+          <li><a style="font-size: 18px; text-transform: none" href="/"> Home </a></li>
+
+          <li><a style="font-size: 18px; text-transform: none" href="/about">About</a></li>
+
+          <!-- <li><a style="font-size: 18px; text-transform: none" href="/blog">Blog</a></li> -->
+
+          <li><a style="font-size: 18px; text-transform: none" href="/portfolio">Portfolio</a></li>
+
+          <li class="uk-active "><a style="font-size: 18px; text-transform: none" href="/contact">Contact</a></li>
+
+
+        </ul>
+
+        <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+      </div>
+    </nav>
+  </div>
+
+  <div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar">
+
+      <ul class="uk-nav uk-nav-primary">
+
+        <li><a style="font-size: 18px" href="/"> Home </a>
+        </li>
+
+        <li><a style="font-size: 18px" href="/about">About</a></li>
+
+        <!-- <li><a style="font-size: 18px" href="/blog">Blog</a></li> -->
+
+        <li><a style="font-size: 18px" href="/portfolio">Portfolio</a></li>
+
+        <li class="uk-active "><a style="font-size: 18px" href="/contact">Contact</a></li>
+
+
+      </ul>
+
+    </div>
+  </div>
+
+
+  <section class="page-title position-relative overflow-hidden">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="uk-heading-line uk-text-center uk-heading-medium"><span>Contact</span></h1>
+      </div>
+    </div>
+  </section>
+
+
+  <p>
+
+  </p>
+
+
+  <section>
+    <div class="uk-container">
+      <form class="uk-form-horizontal uk-margin-large" action="mailto:shivadathgannavarapu@gmail.com" method="post">
+  
+        <div class="uk-margin">
+          <label class="uk-form-label" for="name">Name</label>
+          <div class="uk-form-controls">
+            <input class="uk-input" name="name" id="name" type="text" placeholder="Shivadath Gannavarapu">
+          </div>
+        </div>
+  
+        <div class="uk-margin">
+          <label class="uk-form-label" for="email">Email</label>
+          <div class="uk-form-controls">
+            <input class="uk-input" name="email" id="email" type="text" placeholder="email@example.com">
+          </div>
+        </div>
+        
+        <div class="uk-margin">
+          <label class="uk-form-label" for="message">Message</label>
+          <div class="uk-form-controls">
+            <textarea class="uk-textarea" name="message" id="message" rows="7" placeholder="Your message here"></textarea>
+          </div>
+        </div>
+  
+        <button id="card-radius1" class="uk-align-center uk-button uk-button-default" type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+  
+
+
+  <section>
+    <div class="uk-container uk-margin-xlarge-top uk-margin-bottom">
+      <p></p>
+      <p></p>
+    </div>
+
+
+  </section>
+
+  <section class="uk-margin">
+    <div class="uk-container">
+      <div class="uk-text-center">
+        <p></p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!--footer-->
+  <div class="waves">
+    <svg width="100%" height="300px" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#00B4DB" />
+        <stop offset="50%" stop-color="#224488" />
+        <stop offset="100%" stop-color="#0083B0" />
+      </linearGradient>
+      <path fill="url(#grad1)" d="
+        M0 67
+        C 273,183
+          822,-40
+          1920.00,106 
+        
+        V 359 
+        H 0 
+        V 67
+        Z">
+        <animate repeatCount="indefinite" fill="url(#grad1)" attributeName="d" dur="15s" attributeType="XML" values="
+          M0 77 
+          C 473,283
+            822,-40
+            1920,116 
+          
+          V 359 
+          H 0 
+          V 67 
+          Z; 
+
+          M0 77 
+          C 473,-40
+            1222,283
+            1920,136 
+          
+          V 359 
+          H 0 
+          V 67 
+          Z; 
+
+          M0 77 
+          C 973,260
+            1722,-53
+            1920,120 
+          
+          V 359 
+          H 0 
+          V 67 
+          Z; 
+
+          M0 77 
+          C 473,283
+            822,-40
+            1920,116 
+          
+          V 359 
+          H 0 
+          V 67 
+          Z
+          ">
+        </animate>
+      </path>
+    </svg>
+    <section class="footer1">
+      <div>
+        <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+          <div class="uk-margin-small-bottom">
+            <h5 style="color: black;" class="uk-margin-small-bottom">Email</h5>
+            <a href="mailto:szg6021@psu.edu" style="color: black;">szg6021@psu.edu</a>
+          </div>
+          <div>
+            <h5 style="color: black;" class="uk-margin-small-bottom">Address</h5>
+            <a style="color: black;">Philadelphia,Pennsylvania</a>
+          </div>
+        </div>
+        <div class=" uk-text-center" style="padding-bottom: 1rem;">
+          Copyright &#169; 2023 shivadath gannavarapu. All rights reserved.
+
+        </div>
+      </div>
+  </div>
+  </section>
+  <!--/footer -->
+  <!-- JS Plugins -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.8/iframeResizer.contentWindow.min.js"></script>
+
+  </div>
+
+</body>
+
+</html>
